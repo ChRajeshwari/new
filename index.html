@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+</head>
+<body>
+    <div class="selectmenu">
+        <div class="selectbtn">
+            <span class="sbtn">Select</span>
+            <ion-icon name="caret-down-outline" class="on"></ion-icon>
+        </div>
+       <div class="container">
+        <ul class="options" type="none">
+            <li class="option">
+                
+                <span class="span1">Hyderabad</span>
+            </li>
+            <li class="option">
+
+                <span class="span1">Warangal</span>
+            </li>
+            <li class="option">
+               
+
+                <span class="span1">Nalgonda</span>
+            </li>
+            <li class="option">
+                
+
+                <span class="span1">Mehaboob Nagar</span>
+            </li>
+            <li class="option">
+                
+
+                <span class="span1">Vijayawada</span>
+            </li>
+
+
+        </ul>
+    </div>
+    </div>
+
+
+    <script>
+        const optionMenu=document.querySelector(".selectmenu");
+        const selectBtn=document.querySelector(".selectbtn");
+        const options=document.querySelectorAll(".option");
+     const sbtn1=document.querySelector(".sbtn");
+
+
+selectBtn.addEventListener("click", () => optionMenu.classList.toggle("active"));
+
+options.forEach(option => {
+    option.addEventListener("click",() =>{
+        let selectOption=option.querySelector(".span1").innerText;
+
+        sbtn1.innerText=selectOption;
+       optionMenu.classList.remove("active");
+
+    })
+})
+
+    </script>
+</body>
+</html>
